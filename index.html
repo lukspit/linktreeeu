@@ -108,7 +108,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 44px;
+      margin-bottom: 28px;
       opacity: 0;
       animation: fadeUp 0.5s ease 0.05s forwards;
     }
@@ -156,8 +156,8 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 14px;
-      margin-bottom: 40px;
+      gap: 10px;
+      margin-bottom: 24px;
       opacity: 0;
       animation: fadeUp 0.55s ease 0.12s forwards;
     }
@@ -169,18 +169,17 @@
     }
 
     .photo {
-      width: 108px;
-      height: 120px;
+      width: 88px;
+      height: 96px;
       object-fit: contain;
       object-position: top center;
       display: block;
-      /* accent line at the bottom */
       border-bottom: 2px solid var(--accent);
     }
 
     .photo-placeholder {
-      width: 108px;
-      height: 108px;
+      width: 88px;
+      height: 88px;
       border-radius: 3px;
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -188,7 +187,7 @@
       align-items: center;
       justify-content: center;
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 36px;
+      font-size: 32px;
       color: var(--accent);
     }
 
@@ -197,19 +196,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .name {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 84px;
+      font-size: 72px;
       line-height: 0.88;
       letter-spacing: 0.02em;
       color: var(--text);
       display: block;
     }
 
-    /* Subtitle — monospace, lowercase, editorial */
+    /* Subtitle */
     .role {
       font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
@@ -218,30 +217,11 @@
       letter-spacing: 0.1em;
     }
 
-    /* Tagline */
-    .tagline-wrap {
-      text-align: center;
-    }
-
-    .tagline {
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--muted2);
-      line-height: 1.7;
-      font-style: italic;
-      transition: opacity 0.28s ease, transform 0.28s ease;
-    }
-
-    .tagline strong {
-      color: var(--text);
-      font-style: normal;
-      font-weight: 400;
-    }
-
     /* ─── Links ─── */
     .links {
       display: flex;
       flex-direction: column;
+      gap: 10px;
       opacity: 0;
       animation: fadeUp 0.55s ease 0.28s forwards;
     }
@@ -251,27 +231,30 @@
       font-size: 10px;
       color: var(--muted);
       letter-spacing: 0.12em;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .link-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--border);
+      padding: 14px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
       text-decoration: none;
       color: var(--text);
-      transition: padding-left 0.18s ease, color 0.18s ease;
-    }
-
-    .link-item:first-of-type {
-      border-top: 1px solid var(--border);
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
     .link-item:hover {
-      color: var(--accent);
-      padding-left: 6px;
+      transform: translateY(-2px);
+      border-color: rgba(224, 139, 60, 0.35);
+      background: #181818;
+    }
+
+    .link-item:active {
+      transform: translateY(0);
     }
 
     .link-left {
@@ -280,29 +263,35 @@
       gap: 14px;
     }
 
-    /* Icon box — swap src on the <img> to use a custom image */
+    /* Icon box */
     .link-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 7px;
-      background: var(--surface);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--surface2);
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      transition: background 0.18s ease, border-color 0.18s ease;
       overflow: hidden;
+      transition: border-color 0.18s ease;
     }
 
     .link-item:hover .link-icon {
-      background: var(--accent-dim);
-      border-color: rgba(224, 139, 60, 0.28);
+      border-color: rgba(224, 139, 60, 0.2);
+    }
+
+    /* Logo image inside icon */
+    .link-icon img.icon-img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
     }
 
     .link-icon svg {
-      width: 17px;
-      height: 17px;
+      width: 20px;
+      height: 20px;
       color: var(--muted2);
       transition: color 0.18s ease;
     }
@@ -311,18 +300,10 @@
       color: var(--accent);
     }
 
-    /* Custom image inside icon (optional — see HTML comments) */
-    .link-icon img.icon-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
     .link-text {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
     }
 
     .link-title {
@@ -335,11 +316,6 @@
       font-size: 11px;
       color: var(--muted2);
       font-weight: 400;
-      transition: color 0.18s ease;
-    }
-
-    .link-item:hover .link-sub {
-      color: rgba(224, 139, 60, 0.6);
     }
 
     .link-arrow {
@@ -352,7 +328,7 @@
 
     .link-item:hover .link-arrow {
       color: var(--accent);
-      transform: translate(3px, -3px);
+      transform: translate(2px, -2px);
     }
 
     /* ─── Footer ─── */
@@ -430,31 +406,17 @@
         <div class="role">sistemas que rodam sozinhos</div>
       </div>
 
-      <div class="tagline-wrap">
-        <p class="tagline" id="tagline">
-          Construindo sistemas de IA que <strong>rodam sozinhos</strong>.
-        </p>
-      </div>
-
     </div>
 
     <!-- Links -->
     <div class="links">
       <div class="link-section-label">// links</div>
 
-      <!--
-        Para usar uma imagem personalizada no ícone:
-        Troca o <svg> pelo tag abaixo (coloca o arquivo em assets/):
-        <img class="icon-img" src="assets/icon-nome.png" alt="">
-      -->
-
       <!-- 1. WhatsApp -->
       <a href="https://wa.me/5549999670836" target="_blank" rel="noopener" class="link-item">
         <div class="link-left">
           <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-            </svg>
+            <img class="icon-img" src="assets/icon-whatsapp.webp" alt="WhatsApp">
           </div>
           <div class="link-text">
             <span class="link-title">Fala Comigo</span>
@@ -464,11 +426,13 @@
         <span class="link-arrow">↗</span>
       </a>
 
-      <!-- 2. Comunidade -->
+      <!-- 2. Comunidade — coloca assets/icon-comunidade.png -->
       <a href="https://construtores.nomics.com.br" target="_blank" rel="noopener" class="link-item">
         <div class="link-left">
           <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <img class="icon-img" src="assets/icon-comunidade.png" alt="Comunidade"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
               <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
@@ -482,11 +446,13 @@
         <span class="link-arrow">↗</span>
       </a>
 
-      <!-- 3. Garimpo Leads -->
+      <!-- 3. Garimpo Leads — coloca assets/icon-garimpo.png -->
       <a href="https://garimpooficial.vercel.app/beta" target="_blank" rel="noopener" class="link-item">
         <div class="link-left">
           <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <img class="icon-img" src="assets/icon-garimpo.png" alt="Garimpo Leads"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <svg style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="7"/>
               <path d="M21 21l-4.35-4.35"/>
               <path d="M11 8v6M8 11h6"/>
@@ -504,10 +470,7 @@
       <a href="https://www.youtube.com/@lucaspit_ai" target="_blank" rel="noopener" class="link-item">
         <div class="link-left">
           <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/>
-              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
-            </svg>
+            <img class="icon-img" src="assets/icon-youtube.png" alt="YouTube">
           </div>
           <div class="link-text">
             <span class="link-title">YouTube</span>
@@ -521,11 +484,7 @@
       <a href="https://instagram.com/lucaspit.ai" target="_blank" rel="noopener" class="link-item">
         <div class="link-left">
           <div class="link-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
+            <img class="icon-img" src="assets/icon-instagram.png" alt="Instagram">
           </div>
           <div class="link-text">
             <span class="link-title">Instagram</span>
@@ -548,30 +507,6 @@
 
   </div>
 
-  <script>
-    const taglines = [
-      'Construindo sistemas de IA que <strong>rodam sozinhos</strong>.',
-      'Automatizando negócios com <strong>IA de verdade</strong>.',
-      'Do zero ao sistema funcionando. <strong>Sem enrolação</strong>.',
-      '<strong>Claude Code</strong> aplicado no mundo real.',
-      'A próxima onda. <strong>Você vai surfar ou afundar?</strong>',
-    ];
-
-    let idx = 0;
-    const el = document.getElementById('tagline');
-    el.style.transition = 'opacity 0.28s ease, transform 0.28s ease';
-
-    setInterval(() => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(5px)';
-      setTimeout(() => {
-        idx = (idx + 1) % taglines.length;
-        el.innerHTML = taglines[idx];
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, 300);
-    }, 4000);
-  </script>
 
 </body>
 </html>
