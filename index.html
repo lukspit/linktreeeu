@@ -97,7 +97,7 @@
       z-index: 1;
       max-width: 460px;
       margin: 0 auto;
-      padding: 36px 24px 64px;
+      padding: 24px 24px 64px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -169,8 +169,8 @@
     }
 
     .photo {
-      width: 88px;
-      height: 96px;
+      width: 116px;
+      height: 130px;
       object-fit: contain;
       object-position: top center;
       display: block;
@@ -244,17 +244,20 @@
       border-radius: 10px;
       text-decoration: none;
       color: var(--text);
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      position: relative;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
     }
 
     .link-item:hover {
       transform: translateY(-2px);
-      border-color: rgba(224, 139, 60, 0.35);
+      border-color: rgba(224, 139, 60, 0.4);
       background: #181818;
+      box-shadow: 0 4px 24px rgba(224, 139, 60, 0.08), 0 1px 0 rgba(224, 139, 60, 0.12) inset;
     }
 
     .link-item:active {
       transform: translateY(0);
+      box-shadow: none;
     }
 
     .link-left {
@@ -403,7 +406,7 @@
 
       <div class="name-block">
         <span class="name">LUCAS PIT</span>
-        <div class="role">sistemas que rodam sozinhos</div>
+        <div class="role">especialista em inteligência artificial</div>
       </div>
 
     </div>
@@ -419,8 +422,8 @@
             <img class="icon-img" src="assets/icon-whatsapp.webp" alt="WhatsApp">
           </div>
           <div class="link-text">
-            <span class="link-title">Fala Comigo</span>
-            <span class="link-sub">Solução personalizada via WhatsApp</span>
+            <span class="link-title">Fale Comigo</span>
+            <span class="link-sub">Soluções personalizadas</span>
           </div>
         </div>
         <span class="link-arrow">↗</span>
