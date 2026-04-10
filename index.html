@@ -240,24 +240,24 @@
       justify-content: space-between;
       padding: 14px 16px;
       background: var(--surface);
-      border: 1px solid var(--border);
+      border: 1px solid rgba(224, 139, 60, 0.22);
       border-radius: 10px;
       text-decoration: none;
       color: var(--text);
       position: relative;
+      box-shadow: 0 4px 20px rgba(224, 139, 60, 0.07), 0 1px 0 rgba(224, 139, 60, 0.08) inset;
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
     }
 
     .link-item:hover {
       transform: translateY(-2px);
-      border-color: rgba(224, 139, 60, 0.4);
+      border-color: rgba(224, 139, 60, 0.45);
       background: #181818;
-      box-shadow: 0 4px 24px rgba(224, 139, 60, 0.08), 0 1px 0 rgba(224, 139, 60, 0.12) inset;
+      box-shadow: 0 6px 28px rgba(224, 139, 60, 0.13), 0 1px 0 rgba(224, 139, 60, 0.18) inset;
     }
 
     .link-item:active {
       transform: translateY(0);
-      box-shadow: none;
     }
 
     .link-left {
